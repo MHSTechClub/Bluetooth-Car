@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zcarey.bluetoothcar.MainActivity">
+
+    <LinearLayout
+        android:layout_width="667dp"
+        android:layout_height="323dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <ImageButton
+                android:id="@+id/connection"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:elevation="0dp"
+                android:background="@drawable/notconnected"
+                android:layout_alignParentTop="true"/>
+
+            <ImageButton
+                android:id="@+id/lights"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:elevation="0dp"
+                android:background="@drawable/lightsoff"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/connection"/>
+
+            <ImageButton
+                android:id="@+id/horn"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:elevation="0dp"
+                android:background="@drawable/hornoff"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/lights"/>
+
+            <ImageView
+                android:id="@+id/slowspeedicon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:background="@drawable/lowspeed"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/horn"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/slowspeedicon"
+                android:layout_weight="1"
+                android:max="255" />
+
+            <ImageView
+                android:id="@+id/highspeedicon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:cropToPadding="false"
+                android:elevation="0dp"
+                android:background="@drawable/highspeed"
+                android:layout_toEndOf="@id/seekBar"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/up"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:rotation="0"
+                    app:srcCompat="@drawable/arrowup" />
+
+                <ImageButton
+                    android:id="@+id/down"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/arrowup" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/arrow"
+                    android:rotation="180"/>
+
+                <ImageButton
+                    android:id="@+id/right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/arrow"
+                    android:rotation="0"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
